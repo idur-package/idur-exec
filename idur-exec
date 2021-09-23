@@ -10,10 +10,13 @@ if len(sys.argv) > 1:
 			execute += sys.argv[i] + " "
 	if sys.argv[1] == "-l":
 		os.system("ls /opt/idur/bin/")
+	elif sys.argv[1] == "-v":
+		print("v0.1")
 	else:
 		os.system("/opt/idur/bin/" + execute)
 else:
 	print("""openjdk-17
 Use:
 	idur-exec <idur-app-command>    execute idur app command
-	idur-exec -l                    see execute commands""")
+	idur-exec -l                    see execute commands
+	idur-exec -v                    see version""")
